@@ -1,0 +1,12 @@
+name: Artifact Export 
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    name: Artifact-Export 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Export 
+        run: cat manifest.yaml

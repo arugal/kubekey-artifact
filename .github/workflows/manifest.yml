@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Export 
         run: |
-           pwd && ls -la
+           git branch -vv && pwd && ls -la

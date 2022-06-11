@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Export 
+        run: ls -la
+      - name: Export 
         run: cat manifest.yaml

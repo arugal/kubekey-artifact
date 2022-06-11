@@ -15,4 +15,4 @@ jobs:
         run: curl -sfL https://get-kk.kubesphere.io | sh -
       - name: Export 
         run: |
-           ls -la
+           pwd && ls -la

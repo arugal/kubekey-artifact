@@ -14,4 +14,6 @@ jobs:
       - name: Setup Kubekey
         run: curl -sfL https://get-kk.kubesphere.io | sh -
       - name: Export 
-        run: sudo ./kk artifact export -m manifest.yaml
+        run: |
+           chmod 777 manifest.yaml \
+           && sudo ./kk artifact export -m manifest.yaml

@@ -11,8 +11,6 @@ jobs:
     name: Artifact-Export 
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Kubekey
-        run: curl -sfL https://get-kk.kubesphere.io | sh -
       - name: Export 
         run: |
            pwd && ls -la

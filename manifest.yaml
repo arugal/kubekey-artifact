@@ -1,0 +1,46 @@
+apiVersion: kubekey.kubesphere.io/v1alpha2
+kind: Manifest
+metadata:
+  name: sample
+spec:
+  arches:
+    - amd64
+  operatingSystems:
+    - arch: amd64
+      type: linux
+      id: centos
+      version: "7"
+      osImage: CentOS Linux 7 (Core)
+      repository:
+        iso:
+          localPath:
+          url: https://github.com/kubesphere/kubekey/releases/download/v2.2.0/centos7-rpms-amd64.iso
+  kubernetesDistributions:
+    - type: kubernetes
+      version: v1.21.5
+  components:
+    helm:
+      version: v3.6.3
+    cni:
+      version: v0.9.1
+    etcd:
+      version: v3.4.13
+    containerRuntimes:
+      - type: docker
+        version: 20.10.8
+    crictl:
+      version: v1.24.0
+    docker-registry:
+      version: "2"
+    # harbor:
+    #  version: v2.4.1
+    # docker-compose:
+    #   version: v2.2.2
+  images:
+    - k8s.gcr.io/coredns/coredns:v1.8.0
+    - k8s.gcr.io/kube-apiserver:v1.21.5
+    - k8s.gcr.io/kube-controller-manager:v1.21.5
+    - k8s.gcr.io/kube-proxy:v1.21.5
+    - k8s.gcr.io/kube-scheduler:v1.21.5
+  registry:
+    auths: { }

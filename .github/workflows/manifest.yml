@@ -1,0 +1,17 @@
+name: Artifact Export 
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    name: Artifact-Export 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Kubekey
+        run: curl -sfL https://get-kk.kubesphere.io | sh -
+      - name: Export 
+        run: kk artifact export -m manifest.yaml

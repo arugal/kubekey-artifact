@@ -15,5 +15,5 @@ jobs:
         run: curl -sfL https://get-kk.kubesphere.io | sh -
       - name: Export 
         run: |
-           chmod 777 ./manifest.yaml \
-           && sudo ./kk artifact export -m manifest.yaml
+           chmod 777 /home/runner/work/kubekey-artifact/kubekey-artifact/manifest.yaml && \
+           sudo ./kk artifact export -m manifest.yaml

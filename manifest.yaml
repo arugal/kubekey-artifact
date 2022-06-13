@@ -15,6 +15,15 @@ spec:
         iso:
           localPath:
           url: https://github.com/kubesphere/kubekey/releases/download/v2.2.0/centos7-rpms-amd64.iso
+    - arch: amd64
+      type: linux
+      id: ubuntu
+      version: "20.04"
+      osImage: Ubuntu 20.04.3 LTS
+      repository: 
+        iso:
+          localPath: 
+          url: https://github.com/kubesphere/kubekey/releases/download/v2.2.0/ubuntu-20.04-amd64-debs.iso
   kubernetesDistributions:
     - type: kubernetes
       version: v1.21.5
@@ -44,4 +53,4 @@ spec:
     - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-proxy:v1.21.5
     - registry.cn-beijing.aliyuncs.com/kubesphereio/kube-scheduler:v1.21.5
   registry:
-    auths: { }
+    auths: {}
